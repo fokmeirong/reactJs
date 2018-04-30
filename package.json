@@ -1,0 +1,45 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors --profile --config config/webpack/webpack.dev.conf.js",
+    "test": "npm run test:client && npm run test:server",
+    "test:client": "karma start",
+    "test:server": "node jasmine.runner",
+    "prod": "webpack --devtool false -p --config config/webpack/webpack.prod.conf.js --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fokmeirong/reactJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fokmeirong/reactJs/issues"
+  },
+  "homepage": "https://github.com/fokmeirong/reactJs#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "graceful-fs": "^4.1.11",
+    "jest": "^22.4.3",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "redux": "^4.0.0",
+    "uglifyjs-webpack-plugin": "^1.2.5"
+  }
+}

@@ -1,0 +1,9 @@
+@mixin clearfix($place:'after') {
+    &::#{$place} {
+        clear: both;
+        content: ' ';
+        display: block;
+        visibility: hidden;
+        height: 0;
+  }
+}

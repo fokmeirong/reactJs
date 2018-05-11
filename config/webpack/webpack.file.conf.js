@@ -1,5 +1,5 @@
 module.exports = {
-    devDirectory:'devBuild',
-    proDirectory:'dist',
+    devDirectory:'public',
+    proDirectory:'public',
     resource:'resource',
 };

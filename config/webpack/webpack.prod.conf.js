@@ -2,14 +2,20 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const path = require("path");
 const uglifyjsPlugin= require('uglifyjs-webpack-plugin');
-
+const webpackFile = require("./webpack.file.conf");
 const baseWebpackConfig = require("./webpack.base.conf");
 
 let config = merge(baseWebpackConfig, {
     mode: 'production',
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-    ],
+    output: {
+        path: path.resolve(webpackFile.proDirectory),
+        filename: 'js/[name].js',
+        chunkFilename: "js/[name].js",
+        publicPath: ''
+    },
+
+    devtool: false,
+    plugins: [],
     optimization: {
         minimizer: [
             new uglifyjsPlugin({

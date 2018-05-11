@@ -17,6 +17,8 @@ let config = merge(baseWebpackConfig, {
         new webpack.HotModuleReplacementPlugin(),
     ],
 
+    devtool: "eval",
+
     devServer: {
         host: '0.0.0.0',
         port: 8080,
@@ -25,13 +27,6 @@ let config = merge(baseWebpackConfig, {
         contentBase: path.resolve(webpackFile.devDirectory),
         historyApiFallback: true,
         disableHostCheck: true,
-        proxy: [
-            {
-                context: ['/api/**', '/u/**'],
-                target: 'http://192.168.12.100:8080/',
-                secure: false
-            }
-        ],
         after() {
             opn('http://localhost:' + this.port);
         }

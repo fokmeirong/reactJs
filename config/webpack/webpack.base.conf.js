@@ -2,10 +2,10 @@ const path = require("path");
 
 let config = {
         entry: {
-            'index':'./entryBuild/index.js'
+            'index':'./app.js'
         },
         resolve: {
-            extensions: [".js", ".json", ".jsx", ".css",".scss"],
+            extensions: [".js", ".jsx", ".css",".scss"],
         },
         module: {
             rules: [
@@ -14,15 +14,11 @@ let config = {
                     use: [
                         'babel-loader',
                     ],
-                    include: [
-                        path.resolve(__dirname, "../../app"),
-                        path.resolve(__dirname, "../../entryBuild")
-                    ],
                     exclude: [
                         path.resolve(__dirname, "../../node_modules")
                     ],
                 }
-                
+
             ]
         }
     };

@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --profile --config config/webpack/webpack.dev.conf.js",
-    "test": "jest",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "cypress": "cypress run --browser chrome",
+    "cypress-gui": "cypress open",
     "build": "cross-env NODE_ENV=production && webpack -p --config config/webpack/webpack.prod.conf.js --progress"
   },
   "repository": {
@@ -25,6 +29,12 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "cross-env": "^5.1.5",
+    "cypress": "^3.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^22.4.4",
+    "react-test-renderer": "^16.4.1",
     "serve": "^6.5.6",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13",
@@ -36,7 +46,6 @@
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
     "graceful-fs": "^4.1.11",
-    "jest": "^22.4.3",
     "node-sass": "^4.9.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
@@ -46,5 +55,13 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5"
+  },
+  "jest": {
+    "setupFiles": [
+      "./app/test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 .movies {
     .movie {
         width: calc(100% / 3);
-        display: inline-flex; 
+        display: inline-flex;
         padding: 10px;
         font-size: 14px;
 
@@ -12,7 +12,7 @@
                 display: block;
                 float: left;
                 width: calc(100% - 65px);
-            
+
                 &:last-child {
                     float: right;
                     border: 1px solid gray;
@@ -29,4 +29,67 @@
         }
 
     }
+}
+
+.no-films {
+    width: 100%;
+    height: 500px;
+    line-height: 500px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.landing-page {
+    width: 100%;
+    height: 500px;
+}
+.film-details {
+    padding: 30px 20px;
+    background: black;
+
+    .detail-left {
+        width: 250px;
+        float: left;
+        min-height: 500px;
+        padding-left: 20px;
+    }
+
+    .detail-right {
+        margin-left: 280px;
+        min-height: 500px;
+        color: white;
+
+        p {
+            margin-bottom: 10px;
+            span {
+                margin-right: 10px;
+
+            }
+        }
+
+        .movie {
+
+            &-name {
+                color: $red;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            &-overview {
+                font-size: 20px;
+                color: #a9a7a7;
+            }
+
+            &-release-date {
+                font-size: 20px;
+            }
+
+            &-description {
+                color: #a9a7a7;
+            }
+
+        }
+    }
+
+
 }

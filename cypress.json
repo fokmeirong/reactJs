@@ -1,4 +1,7 @@
 {
 "baseUrl": "http://127.0.0.1:8080",
-"pageLoadTimeout": 3000
+"pageLoadTimeout": 3000,
+"integrationFolder": "app/test",
+"testFiles": "**/*.cypress.spec.js",
+"videoRecording": false
 }

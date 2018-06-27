@@ -365,3 +365,72 @@ exports[`Index render Index page 1`] = `
   </footer>
 </div>
 `;
+
+exports[`components render Content 1`] = `undefined`;
+
+exports[`components render FilterBar 1`] = `undefined`;
+
+exports[`components render Footer 1`] = `undefined`;
+
+exports[`components render Header 1`] = `undefined`;
+
+exports[`components render Header 2`] = `
+<header>
+  <div
+    className="logo"
+  >
+    netflixroulette
+  </div>
+  <div>
+    FIND YOUR MOVIE 
+  </div>
+  <div
+    className="search-bar"
+  >
+    <div
+      className="movie-name"
+    >
+      <input
+        name="movie-title"
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        value={undefined}
+      />
+    </div>
+    <div
+      className="lfloat search-filter"
+    >
+      <span>
+        SEARCH BY
+      </span>
+      <span
+        className="search-by"
+      >
+        <a
+          className="selected"
+          onClick={[Function]}
+        >
+          TITLE
+        </a>
+        <a
+          className=""
+          onClick={[Function]}
+        >
+          GENDER
+        </a>
+      </span>
+    </div>
+    <div
+      className="rfloat"
+    >
+      <button
+        onClick={[Function]}
+      >
+        SEARCH
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`components render Index page 1`] = `undefined`;

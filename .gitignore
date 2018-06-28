@@ -3,3 +3,4 @@
 package-lock.json
 /coverage
 /cypress
+/app/test/__snapshots__

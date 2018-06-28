@@ -10,7 +10,6 @@ class Content extends React.Component {
         super(props);
     }
 
-
     render() {
         if (this.props.movies.length === 0) {
             return (

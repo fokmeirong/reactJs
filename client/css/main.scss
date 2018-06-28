@@ -82,4 +82,15 @@ footer {
     color: #f55263;
 }
 
+.not-found {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+    text-align: center;
+    font-size: 60px;
+}
+
 @import './movies';

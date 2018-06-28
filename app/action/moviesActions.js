@@ -23,7 +23,7 @@ export const fetchMoviesFailure = error => ({
     }
 });
 
-export function fetchMovies(criteria) {
+export function fetchMovies() {
     const stringQuery = QueryStringManager.stringify();
 
     const url = fetch_movies_url + "?" + stringQuery;

@@ -5,8 +5,8 @@ import Index from './app/component/index/Index';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, history, persistor } from './app/storeConfig';
-// const { store, history, persistor } = storeConfig();
 import { Router  } from 'react-router-dom'
+
 
 ReactDOM.render(
     <Provider store={store}>

@@ -5,7 +5,7 @@ class Movie extends React.Component {
     render() {
         return (
             <li className="movie">
-                
+
                     <div>
                         <div className="movie-poster">
                             <Link to={`/film/${this.props.movie.id}`}>
@@ -20,7 +20,6 @@ class Movie extends React.Component {
                             {this.props.movie.genres.join(" & ")}
                         </div>
                     </div>
-                
             </li>
         );
     }

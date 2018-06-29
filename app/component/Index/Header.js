@@ -35,7 +35,7 @@ class Header extends React.Component {
     handleSearchButtonClick() {
         QueryStringManager.set("search", this.state.search);
         QueryStringManager.set("searchBy", this.state.searchBy);
-        history.push("/Search?" + QueryStringManager.stringify());
+        history.push("/Search/" + QueryStringManager.stringify());
         this.props.dispatchMovies();
     }
 

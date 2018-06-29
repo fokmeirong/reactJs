@@ -8,7 +8,7 @@ import NoMatch from './NoMatch'
 export default () => {
     return <Switch>
         <Route exact path='/' component={Blank} />
-        <Route path='/Search' component={Content} />
+        <Route path='/Search/:condition' component={Content} />
         <Route path='/film/:id' component={Details} />
         <Route component={NoMatch} />
     </Switch>

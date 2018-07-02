@@ -4,17 +4,14 @@ import Header from './Header';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary.js';
 import Main from './Main';
 
-export class Index extends React.Component {
-  render() {
-    return (
-      <ErrorBoundary>
+
+const Index = (props) => (
+    <ErrorBoundary>
         <div>
-          <Header />
-          <Main />
+            <Header />
+            <Main />
         </div>
-      </ErrorBoundary>
-    );
-  }
-}
+    </ErrorBoundary>
+)
 
 export default Index;

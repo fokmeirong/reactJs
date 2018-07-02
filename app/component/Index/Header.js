@@ -4,6 +4,25 @@ import QueryStringManager from "../../../client/js/QueryStringManager";
 import { fetchMovies } from "../../action/moviesActions";
 import { history } from '../../storeConfig';
 
+import injectSheet from 'react-jss'
+
+const styles = {
+    myLabel: {
+      fontStyle: 'italic'
+    }
+}
+
+
+const Button = ({ classes, children }) => (
+    <button className={classes.myButton}>
+      <span className={classes.myLabel}>
+        {children}
+      </span>
+    </button>
+  )
+
+  const StyledButton = injectSheet(styles)(Button)
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -63,7 +82,10 @@ class Header extends React.Component {
                         </span>
                     </div>
                     <div className="rfloat">
-                        <button onClick={() => this.handleSearchButtonClick()}  >SEARCH</button>
+                        {/* <button onClick={() => this.handleSearchButtonClick()}  >SEARCH</button> */}
+                        <StyledButton >
+                           <label  onClick={() => this.handleSearchButtonClick()} > SEARCH </label>
+                        </StyledButton>
                     </div>
                 </div>
             </header>

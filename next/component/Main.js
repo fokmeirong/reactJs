@@ -1,10 +1,14 @@
 import React from 'react'
-// import Routers from './routers'
+import { Switch, Route } from 'react-router-dom'
+import Content from './Content'
+import Details from './Deatails'
+import Blank from './Content/Blank'
+import Layout from './Layout';
 
-const Main = () => (
-    <main>
-        test test test
-    </main>
-)
-
-export default Main
+export default () => {
+    return (
+        <Layout>
+            <Content/>
+        </Layout>
+    )
+}

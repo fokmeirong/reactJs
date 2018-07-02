@@ -3,11 +3,10 @@ import Header from './Header';
 import Main from './Main';
 
 const Layout = (props) => (
-    <div>
+    <div id="app">
         <Header />
-        <Main />
+        {props.children}
     </div>
 )
-
 
 export default Layout;

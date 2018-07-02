@@ -1,10 +1,12 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
 import moivesReducers from "./reducer/moivesReducer";
 import detailsReducers from "./reducer/detailsReducer";
+// import { persistStore, persistReducer } from 'redux-persist'
+// import storage from 'redux-persist/lib/storage'
+// import createBrowserHistory from 'history/createBrowserHistory'
 
-import { composeWithDevTools } from 'redux-devtools-extension'
-import thunkMiddleware from 'redux-thunk'
-
+// const history = createBrowserHistory()
 
 const rootReducer = combineReducers({
     moivesReducers,
@@ -12,8 +14,17 @@ const rootReducer = combineReducers({
 });
 
 
-export function initializeStore() {
-    return createStore(rootReducer, composeWithDevTools(applyMiddleware(thunkMiddleware)))
-}
+// const persistConfig = {
+//     key: 'root',
+//     storage,
+// }
+
+// const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
+// const persistor = persistStore(store)
+
+export { store }
+
 
 

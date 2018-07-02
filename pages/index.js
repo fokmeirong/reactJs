@@ -18,8 +18,8 @@ Index.getInitialProps = async function () {
     const res = await fetch('http://react-cdp-api.herokuapp.com/movies')
     const data = await res.json()
 
-    console.log(`Show data fetched. Count: ${data}`)
- 
+    console.log(`Show data fetched. Count: ${JSON.stringify(data)}`)
+
     return {
         shows: data
     }
@@ -27,4 +27,4 @@ Index.getInitialProps = async function () {
 
 
 
-export default connect(Index)
+export default Index
